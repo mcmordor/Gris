@@ -10,7 +10,7 @@
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show Gris
+    show Gris at left
     # These display lines of dialogue.
 
     Gris "You've created a new Ren'Py game."

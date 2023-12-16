@@ -1,22 +1,20 @@
 ﻿label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
+    #####Start of Chapter 1#####
     scene kitchen 1
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show Gris at left
-    # These display lines of dialogue.
-
-    Gris "You've created a new Ren'Py game."
-
-    Gris "Once you add a story, pictures, and music, you can release it to the world!"
-
+    show Gris annoyed at move_right_onscreen
+    Gris "I hate this job"
+    show Gris annoyed at move_left_offscreen
+    Gris "ugh."
+    show Gris flirt at move_right_onscreen
+    Gris "Hey wait..."
+    Gris "nice cock!"
+    Gris "hope you don't mind if I squeeze it"
+    show Gris CU_flirt 
+    Gris "nmmmhhfffppp!"
+    show Gris CU_shocked
+    window hide
+    $ renpy.pause(.5)
+    show cum
+    $ renpy.pause(3.0)
     # This ends the game.
-
     return

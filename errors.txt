@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 14: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    hide window
-    ^
+File "game/scripts/characters/gris.rpy", line 8: expected an indented block
+        print("Playing beep sound for Gris")  
+         ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Dec 15 10:57:27 2023
+Sat Dec 16 22:54:38 2023

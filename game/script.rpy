@@ -16,5 +16,7 @@
     $ renpy.pause(.5)
     show cum
     $ renpy.pause(3.0)
+    show Grevor CU
+    Grevor "gay"
     # This ends the game.
     return

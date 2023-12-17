@@ -1,5 +1,18 @@
+init python:
+    #Generate seperate audio channel from voice for beeps.
+    renpy.music.register_channel(name='beeps', mixer='voice')
+    
+    #Character callback that generates the sound.
+    def e(event, **kwargs):
+        if event == "show":  # When the text is shown
+            print("Playing beep sound for Gris")  # Debug message
+            renpy.sound.play("audio/output.wav", channel="beeps", loop=False)
+        elif event == "slow_done" or event == "end":  # When the text is finished displaying or you open a menu.
+            renpy.sound.stop(channel="beeps")
+
+
 #Gris the Goblin
-define Gris = Character("Gris", color="#ADD8E6")
+define Gris = Character("Gris", color="#ADD8E6", callback=e)
 #Gris Torso Shots
 image Gris happy = "characters/Gris/Torso/Gris_Happy_Torso.png"
 image Gris annoyed  = "characters/Gris/Torso/Gris_Annoyed_Torso.png"

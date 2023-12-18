@@ -1,6 +1,7 @@
 init python:
     #Generate seperate audio channel from voice for beeps.
     renpy.music.register_channel(name='beeps', mixer='voice')
+    renpy.music.set_volume('beeps', 0.5)
     
     #Character callback that generates the sound.
     def e(event, **kwargs):

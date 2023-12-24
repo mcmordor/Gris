@@ -113,6 +113,9 @@ screen say(who, what):
                         add "images/icons/gritch_icon.png" at icon
                     if who == "Grevor":
                         add "images/icons/grevor_icon.png" at icon
+                    if who == "Mr. Grucki":
+                        add "images/icons/mrgrucki_icon.png" at icon
+                            
 
             window:
                 id "namebox"

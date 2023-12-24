@@ -1,5 +1,5 @@
 #Graustin the Goblin
-define Graustin = Character("Graustin", color="#ADD8E6")
+define Graustin = Character("Graustin", color="#c8ade6")
 #Graustin Torso Shots
 image Graustin happy = "characters/Graustin/Torso/Graustin_Happy_Torso.png"
 image Graustin annoyed  = "characters/Graustin/Torso/Graustin_Annoyed_Torso.png"

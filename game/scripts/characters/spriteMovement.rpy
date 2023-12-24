@@ -6,3 +6,19 @@ transform move_right_onscreen:
     xoffset -1500
     linear 1 xoffset 0
     pause 1.0  # This ensures the transform completes before proceeding.
+
+transform off_left:
+    xalign 0
+    xoffset -200
+
+transform off_right:
+    xalign 1.0
+    xoffset 200
+
+transform mid_left:
+    xalign 0.5
+    xoffset -200
+
+transform mid_right:
+    xalign 0.5
+    xoffset 100

@@ -1,5 +1,5 @@
 #Gris the Goblin
-define Gris = Character("Gris", color="#ADD8E6")
+define Gris = Character("Gris", color="#e6b6ad")
 #Gris Torso Shots
 image Gris happy = "characters/Gris/Torso/Gris_Happy_Torso.png"
 image Gris annoyed  = "characters/Gris/Torso/Gris_Annoyed_Torso.png"

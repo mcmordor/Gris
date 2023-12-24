@@ -89,12 +89,12 @@ label exterior_rattle_snake_rapids:
     narrator "Mr. Grucki fingers each of their mouths full of the hellish chew, and they hop on for the ride of their lives."
 
     # End Scene. Transition to the Rattle Snake Rapids ride.
-    scene rattle_snake_rapids_ride
+    scene black
     with dissolve
     # The script continues with the psychedelic trip sequence as previously described.
     return
 
-label rattle_snake_rapids:
+label black:
     scene rattle_snake_rapids_exterior
     with fade
 

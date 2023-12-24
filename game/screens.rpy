@@ -102,6 +102,17 @@ screen say(who, what):
         id "window"
 
         if who is not None:
+            hbox:
+                vbox:
+                    #character icon
+                    if who == "Gris":
+                        add "images/icons/gris_icon.png" at icon
+                    if who == "Graustin":
+                        add "images/icons/graustin_icon.png" at icon
+                    if who == "Gritch":
+                        add "images/icons/gritch_icon.png" at icon
+                    if who == "Grevor":
+                        add "images/icons/grevor_icon.png" at icon
 
             window:
                 id "namebox"

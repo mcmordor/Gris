@@ -22,3 +22,8 @@ transform mid_left:
 transform mid_right:
     xalign 0.5
     xoffset 100
+
+transform icon:
+    xalign 0.0
+    xoffset 50
+    yoffset -50

@@ -14,14 +14,14 @@
 label exterior_rattle_snake_rapids:
     scene rattle_snake_rapids_exterior
     with fade
-    show Gris at mid_right
+    show Gris zorder 3 at mid_right
     Gris "I'm not saying we would cause a terrorist attack, just that legally we're allowed to."
-    show Gritch at off_right
+    show Gritch zorder 2 at off_right
     Gritch "The laws would change, and you'd go to prison for the rest of your life, Gris."
-    show Grevor at off_left
+    show Grevor zorder 1 at off_left
     Grevor "Yeah, but what if one of us goes through TSA with a suitcase full of kindling and someone else wears a flint watch and steel necklace?"
     Gritch "I'd call my supervisor immediately."
-    show Graustin at mid_left    
+    show Graustin zorder 5 at mid_left    
     Graustin "Yeah, but what if it was just a small, normal amount of kindling?"
     Gritch "Anything sketchy you try to do at the airport will get you detained."
     Gris "Gritch! They have no rules for that!"
@@ -49,7 +49,7 @@ label exterior_rattle_snake_rapids:
 
     # Mr. Grucki arrives and jumps on Graustin's back like a spider monkey.
     
-    show mr_grucki 
+    show mr_grucki zorder 4 at left
     mr_grucki "Make that one more! Come on, kids... HEHEHEHE!"
     mr_grucki "Have ya been boning up on your ol' Grootah Studies?"
     Grevor "Uh... hey, Mr. Grucki."

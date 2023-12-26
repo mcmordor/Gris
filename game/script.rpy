@@ -44,8 +44,8 @@ label exterior_rattle_snake_rapids:
     Gritch "We'll ride with the kid."
     lagoon_passenger "*frowns harder*"
     stop music fadeout 1.0  
-    play music "audio/music/gruckintro.mp3" noloop volume 0.5
-    queue music "audio/music/gruckiloop1.mp3" loop volume 0.5
+    play music "audio/music/gruckintro.mp3" noloop volume 0.25
+    queue music "audio/music/gruckiloop1.mp3" loop volume 0.25
     Graustin "Hurry before Mr. Gr..."
     play sound "audio/sfx/jump.mp3" volume 1.0
     Graustin "FPHE! GFIUCK!"
@@ -82,10 +82,10 @@ label exterior_rattle_snake_rapids:
     mr_grucki "Now it's all your turn! TAKE A WHIFF OF THIS!"
 
     # Narrator describes the scene as they get on the ride.
+    play music "audio/music/gruckend.mp3" volume 0.25 noloop
     play sound "audio/sfx/wicked_laugh.mp3" volume 0.75 
     queue sound "audio/sfx/yeah_boy.mp3" volume 2.0
     stop music fadeout 1.0
-    play music "audio/music/gruckend.mp3" volume 0.5 noloop
     narrator "Mr. Grucki fingers each of their mouths full of the hellish chew, and they hop on for the ride of their lives."
 
     # End Scene. Transition to the Rattle Snake Rapids ride.

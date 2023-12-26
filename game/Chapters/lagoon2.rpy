@@ -2,22 +2,99 @@ label black:
     scene rattle_snake_rapids_exterior
     with fade
     # The group is now on the ride, Mr. Grucki has just forced Salvia on them.
-    Gris "I can't believe we're doing this. This is insane!"
+    Gritch "I can't believe we're doing this. This is insane!"
     Grevor "Just go with it, man. It's too late to back out now."
     Grevor "Anyways, do you think Salvia is anabolic?"
     Grevor "cuz that woudl be sick as hell"
     Graustin "What if we see the 'other side', the place beyond life and death?"
     Gritch "NO!"
     #Mr Gucki Panting and pacing like a feral dog
+    show graustin_torso:
+        default
+        subpixel True pos (1035, 1251) zpos 423.0 
+    
     Graustin  "Mr. Grucki, what troubles you so?"
+    hide graustin_torso
+    #Mr Grucki PAcing Animatin
+    window auto hide
+    play sound "audio/sfx/jump.mp3" loop
+    play music "audio/music/gruckiloop1.mp3"
+    show mr_grucki:
+        default
+        subpixel True 
+        parallel:
+            xpos 252 
+            linear 0.32 xpos 549 
+            linear 0.42 xpos 846 
+            linear 0.61 xpos 1125 
+            linear 0.82 xpos 1170 
+            linear 1.10 xpos 1521 
+            linear 1.11 xpos 1116 
+            linear 0.87 xpos 828 
+            linear 1.25 xpos 252 
+        parallel:
+            ypos 1197 
+            linear 0.32 ypos 1305 
+            linear 0.42 ypos 1197 
+            linear 0.61 ypos 1368 
+            linear 0.40 ypos 1278 
+            linear 0.42 ypos 1341 
+            linear 1.10 ypos 1458 
+            linear 1.11 ypos 1557 
+            linear 0.87 ypos 1368 
+            linear 0.95 ypos 1524 
+            linear 0.30 ypos 1197 
+        parallel:
+            zpos 45.0 
+            linear 0.32 zpos 117.0 
+            linear 1.03 zpos 153.0 
+            linear 1.61 zpos 0.0 
+            linear 0.31 zpos 117.0 
+            linear 1.11 zpos 36.0 
+            linear 0.87 zpos 162.0 
+            linear 0.67 zpos 288.0 
+            linear 0.58 zpos 45.0 
+        parallel:
+            xrotate 0.0 
+            linear 0.32 xrotate -9.0 
+            linear 0.42 xrotate 0.0 
+            linear 2.53 xrotate -27.0 
+            linear 0.44 xrotate 36.0 
+            linear 1.54 xrotate 0.0 
+        parallel:
+            yrotate 0.0 
+            linear 5.25 yrotate -36.0 
+            linear 1.25 yrotate 0.0 
+        parallel:
+            rotate 0.0 
+            linear 0.32 rotate -9.0 
+            linear 0.42 rotate 0.0 
+            linear 0.61 rotate -18.0 
+            linear 0.40 rotate 0.0 
+            linear 0.42 rotate 27.0 
+            linear 0.79 rotate 0.0 
+            linear 0.31 rotate -18.0 
+            linear 0.44 rotate 0.0 
+            linear 1.54 rotate -18.0 
+            linear 0.67 rotate -26.35 
+            linear 0.58 rotate 0.0 
+    with Pause(6.60)
+    show mr_grucki:
+        pos (252, 1197) zpos 45.0 xrotate 0.0 yrotate 0.0 rotate 0.0 
+    window auto show
+    play music "audio/music/gruckend.mp3" noloop
+    stop sound 
     mr_grucki "I can't stand still! You know, I get the best stuff right here in Lagoon. Farmington's got nothing on me!"
     kid "Daddy, are they allowed to do this?"
     lagoon_passenger "I don't know son, I think that man is their...teacher?"
     lagoon_passenger "They are probably special needs or something. Just try not to look at them."
+    hide mr_grucki
     Gritch "STOP IT! DON'T SAY THAT!!!"
     Graustin "Mr. Grucki, stop pacing! You're scaring Gris!"
+    show Gris CU_shocked
     Gris "..."
     Gris " "
+    hide Gris CU_shocked
     mr_grucki "This park's my kingdom, and I rule the underground here!"
     Gritch "MR GRUCKI! STOP BEING A WEIRDO RIGHT NOW!!!"
     Graustin "*Gasp* Gritch..."
@@ -28,38 +105,34 @@ label black:
 label grucki_transformation:
     scene psychedelic_trip_background
     with dissolve
-
+    define goblin_sacrifices = 0
     # Mr. Grucki undergoes a terrifying transformation.
     narrator "Before their eyes, Mr. Grucki's form twists and contorts, his body elongating and morphing into a grotesque, giant, skin-like cat."
     #show mr_grucki_cat_form
 
-    mr_grucki_cat "My little playthings, it's time for a game. Will you offer yourselves to my barbed tongue?"
+    mr_grucki "My little playthings, it's time for a game. Will you offer yourselves to my barbed tongue?"
     
     # The monstrous Mr. Grucki presents a horrifying challenge.
     narrator "Each goblin must choose a part of their body for the creature to lick with its razor-sharp tongue. But too many licks from the same person, and they'll be torn apart."
 
     # The player makes a choice for each character.
     label sacrifice_choice:
-        $ grisLick = 0
-        $ grevorLick = 0
-        $ graustinLick = 0
-        $ gritchLick = 0
         menu:
             "Gris offers his arm":
                 Gris "Take my arm, but nothing more."
-                $ grisLick +=1
+                $ grisLick =1
                 narrator "The monstrous cat licks Gris's arm, its tongue like sandpaper, leaving the skin raw and bleeding."
             "Grevor offers his leg":
                 Grevor "My leg... do what you must."
-                $ grisLick +=1
+                $ grevorLick =1
                 narrator "With each lick, Grevor winces in pain, the barbs scraping flesh from bone."
             "Graustin offers his hand":
                 Graustin "Here, my hand... it's all I can bear to give."
-                $ grisLick +=1
+                $ graustinLick =1
                 narrator "Graustin's hand is left red and torn, each lick a new agony."
             "Gritch refuses to offer anything":
                 Gritch "I won't play this game! I refuse!"
-                $ grisLick +=1
+                $ goblin_sacrifices = 3
                 narrator "The creature turns on Gritch, its maw opening wide, ready to consume him whole."
 
     # The consequence of the choices made.

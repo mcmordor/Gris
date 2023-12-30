@@ -103,7 +103,7 @@ label black:
     jump grucki_transformation
 
 label grucki_transformation:
-    scene psychedelic_trip_background
+    scene psychedelic_trip
     with dissolve
     define goblin_sacrifices = 0
     # Mr. Grucki undergoes a terrifying transformation.
@@ -134,7 +134,6 @@ label grucki_transformation:
                 Gritch "I won't play this game! I refuse!"
                 $ goblin_sacrifices = 3
                 narrator "The creature turns on Gritch, its maw opening wide, ready to consume him whole."
-
     # The consequence of the choices made.
     if goblin_sacrifices >= 3:
         # The chosen character meets a gruesome end.
@@ -142,10 +141,10 @@ label grucki_transformation:
         scene goblin_death
         with shake
     else:
+        scene psychedelic_trip_tongue
+        with dissolve
         # The group narrowly escapes the creature's wrath.
         narrator "The creature, sated by the offerings, recedes into the shadows, leaving the goblins trembling and scarred."
-        scene psychedelic_trip_background
-        with dissolve
 
     return
 

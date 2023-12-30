@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Chapters/lagoon2.rpy", line 82: expected 'image_name_component' not found.
-    show hide mr_grucki:
-        ^
+File "game/Chapters/lagoon2.rpy", line 146: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    scene psychedelic_trip_tongue
+    ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue Dec 26 12:54:13 2023
+Fri Dec 29 17:59:47 2023

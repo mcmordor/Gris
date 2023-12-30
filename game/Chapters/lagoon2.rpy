@@ -1,5 +1,5 @@
 label black:
-    scene rattle_snake_rapids_exterior
+    scene rattle_snake_rapids_ride
     with fade
     # The group is now on the ride, Mr. Grucki has just forced Salvia on them.
     Gritch "I can't believe we're doing this. This is insane!"
